@@ -50,6 +50,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 				.catch(err => err)
 			},
+
+			fetchPlanetsStarWars: () =>{
+				fetch('https://www.swapi.tech/api/planets')
+				.then(response => response.json())
+				.then(data => {
+					setStore({planetsStarWars: data.results})
+				})
+				.catch(err => err)
+			},
+
+
 		}
 	};
 };

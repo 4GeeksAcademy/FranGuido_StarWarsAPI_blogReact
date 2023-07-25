@@ -10,6 +10,8 @@ export const Single = props => {
 		<div className="container">
 
 <h1>{ store.peopleStarWars.length != 0 ? store.peopleStarWars[params.theid].name : 'loading' }</h1>
+
+
 			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
 
 			<hr className="my-4" />
