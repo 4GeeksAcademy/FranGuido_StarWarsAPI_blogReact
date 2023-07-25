@@ -46,10 +46,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch('https://www.swapi.tech/api/people')
 				.then(response => response.json())
 				.then(data => {
-					console.log(data);
+					setStore({peopleStarWars: data.results})
 				})
 				.catch(err => err)
-			}
+			},
 		}
 	};
 };
