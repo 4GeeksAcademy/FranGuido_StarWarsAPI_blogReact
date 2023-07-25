@@ -4,6 +4,8 @@ import "../../styles/home.css";
 
 export const Home = () => (
 	<div className="text-center mt-5">
+		<h1 className="text-danger">Characters</h1>
+		<h1 className="text-danger">Planets</h1>
 		<h1>Hello Rigo!</h1>
 		<p>
 			<img src={rigoImage} />
