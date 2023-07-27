@@ -16,6 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			peopleStarWars: [],
 			planetsStarWars: [],
+			vehiclesStarWars: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -42,6 +43,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ demo: demo });
 			},
 
+			// Fetching SW characters
+
 			fetchPeopleStarWars: () =>{
 				fetch('https://swapi.dev/api/people')
 				.then(response => response.json())
@@ -51,11 +54,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch(err => err)
 			},
 
+			// Fetching SW planets data
+
 			fetchPlanetsStarWars: () =>{
 				fetch('https://swapi.dev/api/planets')
 				.then(response => response.json())
 				.then(data => {
 					setStore({planetsStarWars: data.results})
+				})
+				.catch(err => err)
+			},
+
+			// Fetching SW vehicles data
+			fetchVehiclesStarWars: () =>{
+				fetch('https://swapi.dev/api/vehicles')
+				.then(response => response.json())
+				.then(data => {
+					setStore({vehiclesStarWars: data.results})
 				})
 				.catch(err => err)
 			},
