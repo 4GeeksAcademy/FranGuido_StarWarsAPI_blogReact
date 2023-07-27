@@ -22,7 +22,7 @@ const {store, actions} = useContext(Context)
 
   return (
     <>
-    <div className="row align-items-center ms-2">
+    <div className="row align-items-center ms-1 ">
     <h1 className=" text-warning mb-5">Characters</h1>
     {store.peopleStarWars.map((value, index) => {
 
