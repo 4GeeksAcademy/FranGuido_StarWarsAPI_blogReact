@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const planetsCard = {
     width: "18rem",
     background: "#F2F2F2",
-    textAlign: "left"
+    textAlign: "left",
   };
 
 export const Planets = () => {
@@ -26,8 +26,9 @@ export const Planets = () => {
                       <img src="" className="card-img-top" alt="..."></img>
                       <div className="card-body p-3">
                         <h3 className="card-title" >{value.name}</h3>
-                        <p className="card-text" > Population: </p>
-                        <p className="card-text" > Terrain: </p>
+                        <p className="card-text" > Population: {value.population} </p>
+                        <p className="card-text" > Terrain: {value.terrain} </p>
+                        <p className="card-text" > Climate: {value.climate} </p>
                         <Link to={"/single/" + index}>
                           <button className="btn btn-primary">Learn more!</button>
                         </Link>

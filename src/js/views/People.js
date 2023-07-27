@@ -29,9 +29,9 @@ const {store, actions} = useContext(Context)
                   <img src="" className="card-img-top" alt="..."></img>
                   <div className="card-body p-3">
                     <h3 className="card-title" >{value.name}</h3>
-                    <p className="card-text" > Gender: </p>
-                    <p className="card-text" > Hair color: </p>
-                    <p className="card-text" > Eye color: </p>
+                    <p className="card-text" > Gender: {value.gender} </p>
+                    <p className="card-text" > Hair color: {value.hair_color} </p>
+                    <p className="card-text" > Eye color: {value.eye_color} </p>
                     <Link to={"/single/" + index}>
                       <button className="btn btn-primary">Learn more!</button>
                     </Link>

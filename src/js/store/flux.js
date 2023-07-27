@@ -43,7 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			fetchPeopleStarWars: () =>{
-				fetch('https://www.swapi.tech/api/people')
+				fetch('https://swapi.dev/api/people')
 				.then(response => response.json())
 				.then(data => {
 					setStore({peopleStarWars: data.results})
@@ -52,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			fetchPlanetsStarWars: () =>{
-				fetch('https://www.swapi.tech/api/planets')
+				fetch('https://swapi.dev/api/planets')
 				.then(response => response.json())
 				.then(data => {
 					setStore({planetsStarWars: data.results})

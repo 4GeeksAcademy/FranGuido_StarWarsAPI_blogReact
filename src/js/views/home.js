@@ -9,8 +9,6 @@ export const Home = () => (
 	<div className=" mt-5 ms-5">
 		<People/>
 		<Planets/>
-		
-		
 	</div>
 	
 );
