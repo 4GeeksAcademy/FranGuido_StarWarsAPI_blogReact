@@ -17,6 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			peopleStarWars: [],
 			planetsStarWars: [],
 			vehiclesStarWars: [],
+			favoritesStarWars: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -74,6 +75,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 				.catch(err => err)
 			},
+
+			// Add favorites
+			addFavorites: (newItem) =>{
+				const store = getStore();
+				setStore({favoritesStarWars: [newItem, ...store.favoritesStarWars]})
+				localStorage.setItem("favoritesStarWars", JSON.stringify(store.favoritesStarWars))
+				
+			},
+
+			// Delete favorites
+			
 
 
 		}

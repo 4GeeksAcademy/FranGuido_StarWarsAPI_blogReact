@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const characterCard = {
     width: "16rem",
     height: "35rem",
@@ -31,7 +32,7 @@ const {store, actions} = useContext(Context)
             
             <div className="col-4 mx-3 mb-5 rounded" style={characterCard} key={index}>
                   
-                  <img src={`https://starwars-visualguide.com/assets/img/characters/` + (index +1 ) + `.jpg`} className="card-img-top mt-3"  alt="..."></img>
+                  <img src={`https://starwars-visualguide.com/assets/img/characters/` + (index + 1) + `.jpg`} className="card-img-top mt-3"  alt="..."></img>
                   <div className="card-body p-3">
                     <h5 className="card-title" >{value.name}</h5>
                     <p className="card-text" > Birth Year: {value.birth_year} </p>
@@ -40,7 +41,7 @@ const {store, actions} = useContext(Context)
                     <Link to={"/single/" + index}>
                       <button className="btn btn-primary">Learn more!</button>
                     </Link>
-                    <button class="btn btn-warning ms-2"><i class="fas fa-heart"></i></button>
+                    <button class="btn btn-warning ms-2" onClick={()=> actions.addFavorites(value.name) }><i class="fas fa-heart"></i></button>
                   </div>
                 </div>
                 

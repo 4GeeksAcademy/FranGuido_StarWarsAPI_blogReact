@@ -35,7 +35,7 @@ export const Planets = () => {
                 <Link to={"/single/" + index}>
                   <button className="btn btn-primary">Learn more!</button>
                 </Link>
-                <button class="btn btn-warning ms-5"><i class="fas fa-heart"></i></button>
+                <button class="btn btn-warning ms-5" onClick={()=> actions.addFavorites(value.name) } ><i class="fas fa-heart"></i></button>
               </div>
             </div>
 

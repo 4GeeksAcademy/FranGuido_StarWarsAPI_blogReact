@@ -1,7 +1,11 @@
 import React from "react";
+import { Context } from '../store/appContext';
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+
+  
+
 	return (
 
 		<div className="container mt-5  bg-light rounded">
@@ -18,9 +22,10 @@ export const Navbar = () => {
                 Favorites
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li>Action</li>
-                <li>Another action</li>
-                <li>Something else here</li>
+                <li>
+                  <label>Algo</label>
+                  <button className="float-end"></button>
+                </li> 
               </ul>
             </div>
           </Link>
