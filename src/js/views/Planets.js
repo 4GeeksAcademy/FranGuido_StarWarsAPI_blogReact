@@ -29,9 +29,9 @@ export const Planets = () => {
                 currentTarget.src = "https://placehold.co/600x600.png";
               }} ></img>
               <div className="card-body p-3">
-                <h5 className="card-title" >{value.name}</h5>
-                <p className="card-text" > Population: {value.population} </p>
-                <p className="card-text" > Climate: {value.climate} </p>
+                <h5 className="card-title" ><b>{value.name}</b></h5>
+                <p className="card-text" > <b>Population:</b> {value.population} </p>
+                <p className="card-text" > <b>Climate:</b> {value.climate} </p>
                 <Link to={"/PlanetsJumbotron/" + index}>
                   <button className="btn btn-primary">Learn more!</button>
                 </Link>

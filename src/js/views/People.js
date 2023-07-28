@@ -34,10 +34,10 @@ const {store, actions} = useContext(Context)
                   
                   <img src={`https://starwars-visualguide.com/assets/img/characters/` + (index + 1) + `.jpg`} className="card-img-top mt-3"  alt="..."></img>
                   <div className="card-body p-3">
-                    <h5 className="card-title" >{value.name}</h5>
-                    <p className="card-text" > Birth Year: {value.birth_year} </p>
-                    <p className="card-text" > Hair color: {value.hair_color} </p>
-                    <p className="card-text" > Eye color: {value.eye_color} </p>
+                    <h5 className="card-title" ><b>{value.name}</b></h5>
+                    <p className="card-text" > <b>Birth Year:</b>  {value.birth_year} </p>
+                    <p className="card-text" > <b>Hair color:</b> {value.hair_color} </p>
+                    <p className="card-text" > <b>Eye color:</b> {value.eye_color} </p>
                     <Link to={"/single/" + index}>
                       <button className="btn btn-primary">Learn more!</button>
                     </Link>

@@ -29,10 +29,10 @@ export const Vehicles = () => {
                 currentTarget.src = "https://placehold.co/600x400.png";
               }} ></img>
               <div className="card-body p-3">
-                <h3 className="card-title" >{value.name}</h3>
-                <p className="card-text" > Model: {value.model} </p>
-                <p className="card-text" > Passengers: {value.passengers} </p>
-                <p className="card-text" > Crew: {value.crew} </p>
+                <h3 className="card-title" ><b>{value.name}</b></h3>
+                <p className="card-text" > <b>Model:</b> {value.model} </p>
+                <p className="card-text" > <b>Passengers:</b> {value.passengers} </p>
+                <p className="card-text" > <b>Crew:</b> {value.crew} </p>
                 <Link to={"/VehicleJumbotron/" + index}>
                   <button className="btn btn-primary">Learn more!</button>
                 </Link>
