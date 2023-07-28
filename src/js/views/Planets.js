@@ -32,7 +32,7 @@ export const Planets = () => {
                 <h5 className="card-title" >{value.name}</h5>
                 <p className="card-text" > Population: {value.population} </p>
                 <p className="card-text" > Climate: {value.climate} </p>
-                <Link to={"/single/" + index}>
+                <Link to={"/PlanetsJumbotron/" + index}>
                   <button className="btn btn-primary">Learn more!</button>
                 </Link>
                 <button class="btn btn-warning ms-5" onClick={()=> actions.addFavorites(value.name) } ><i class="fas fa-heart"></i></button>

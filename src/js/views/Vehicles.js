@@ -33,7 +33,7 @@ export const Vehicles = () => {
                 <p className="card-text" > Model: {value.model} </p>
                 <p className="card-text" > Passengers: {value.passengers} </p>
                 <p className="card-text" > Crew: {value.crew} </p>
-                <Link to={"/single/" + index}>
+                <Link to={"/VehicleJumbotron/" + index}>
                   <button className="btn btn-primary">Learn more!</button>
                 </Link>
                 <button class="btn btn-warning ms-5" onClick={()=> actions.addFavorites(value.name) } ><i class="fas fa-heart"></i></button>
