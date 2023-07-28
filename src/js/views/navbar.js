@@ -27,9 +27,9 @@ export const Navbar = () => {
               
                   {store.favoritesStarWars.map((value, index)=>{
                     return (
-                      <li className="mx-2 ps-2" key={index}>
+                      <li className={`list-item-${index}`} key={index}>
                       {value}
-                      <i className="fas fa-trash ps-4"></i>
+                      <i className="fas fa-trash ps-4" onClick={()=>{var thisItem = document.querySelector(`.list-item-${index}`); thisItem.innerHTML="";}} ></i>
                       </li>
                     )
                   })}
